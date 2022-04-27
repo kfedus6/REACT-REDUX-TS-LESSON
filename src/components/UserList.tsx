@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTypedSelector } from '../hooks/useTypedSelector';
 
-export const UserList: React.FC = () => {
+const UserList: React.FC = () => {
 
    const { users, loading, error } = useTypedSelector(state => state.user)
 
@@ -11,3 +11,5 @@ export const UserList: React.FC = () => {
       </>
    )
 }
+
+export default UserList;
