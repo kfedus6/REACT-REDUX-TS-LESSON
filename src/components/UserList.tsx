@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTypedSelector } from '../hooks/useTypedSelector';
 
-export const TodoList: React.FC = () => {
+export const UserList: React.FC = () => {
 
    const { users, loading, error } = useTypedSelector(state => state.user)
 
