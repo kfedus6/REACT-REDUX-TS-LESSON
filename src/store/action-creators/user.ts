@@ -13,3 +13,12 @@ export const fetchUsers = () => {
       }
    }
 }
+
+export const fetchRemoveUsers = (id: number) => {
+   return async (dispatch: Dispatch<UserAction>) => {
+      fetch(`https://jsonplaceholder.typicode.com/users/${id}`, {
+         method: 'DELETE',
+      })
+      dispatch({ type: UserActionTypes.FETCH_USER_REMOVE, paylaod: id })
+   }
+}

@@ -6,7 +6,7 @@ const TodoList: React.FC = () => {
    const { todos, loading, error } = useTypedSelector(state => state.todo)
 
    return (
-      <>{console.log(todos)}{console.log(loading)}{console.log(error)}</>
+      <>{console.log(todos)}</>
    )
 }
 

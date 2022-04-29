@@ -7,12 +7,13 @@ export interface userState {
 export enum UserActionTypes {
    FETCH_USERS = 'FETCH_USERS',
    FETCH_USERS_SUCCES = 'FETCH_USERS_SUCCES',
-   FETCH_USERS_ERROR = 'FETCH_USERS_ERROR'
+   FETCH_USERS_ERROR = 'FETCH_USERS_ERROR',
+   FETCH_USER_REMOVE = 'FETCH_USER_REMOVE',
 }
 
 
 interface FetchUserAction {
-   type: UserActionTypes.FETCH_USERS
+   type: UserActionTypes.FETCH_USERS,
 }
 
 interface FetchUserSuccesAction {
@@ -25,4 +26,9 @@ interface FetchUserErrorAction {
    payload: null | string
 }
 
-export type UserAction = FetchUserAction | FetchUserSuccesAction | FetchUserErrorAction
+interface FetchUsersRemoveAction {
+   type: UserActionTypes.FETCH_USER_REMOVE,
+   paylaod: number,
+}
+
+export type UserAction = FetchUserAction | FetchUserSuccesAction | FetchUserErrorAction | FetchUsersRemoveAction;
